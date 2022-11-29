@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+:root {
+  --fontPrimary: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--fontPrimary);
+  font-family: "PT Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Nav CSS Start */
+.nav {
+  padding: 1rem 1rem 0.3rem 1rem;
+  position: sticky;
+  position: -webkit-sticky;
+  top: -150px;
+  background-color: #fff;
+  z-index: 1;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 0 15px 0 #e5e5e5;
+}
+
+.nav .header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav .header a img {
+  width: 120px;
+}
+
+.nav .header a h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.nav .navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 0 1rem;
+}
+
+.nav .navBar .navOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav .navBar .navOptions h4 {
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.nav .navBar .navOptions h4:hover {
+  background-color: var(--fontPrimary);
+  color: white;
+}
+
+.nav .navBar .account {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.nav .navBar .account a {
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.nav .navBar .account a:hover {
+  background-color: var(--fontPrimary);
+  color: white;
+}
+
+.current {
+  background-color: var(--fontPrimary) !important;
+  color: white !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav .header {
+    display: none;
+  }
+
+  .nav .navBar,
+  .nav .navBar .navOptions,
+  .nav .navBar .account {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Nav CSS End */
+
+.main {
+  padding: 0 2rem;
+}
+
+.container {
+  padding: 2rem 1rem;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px 10px;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+  .images {
+    grid-template-columns: auto;
+    gap: 20px 0;
+  }
+}
+
+.image {
+  width: 375px;
+  height: 490px;
+  position: relative;
+}
+
+.image .imageContainer img {
+  width: 375px;
+  height: 490px;
+  /* background-attachment: fixed; */
+  object-fit: cover;
+  object-position: -15px;
+  transition: opacity 0.4s;
+}
+
+.image:hover .imageContainer img {
+  opacity: 0.6;
+}
+
+.image .textContainer {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: opacity 0.4s, left 0.4s, bottom 0.4s;
+}
+
+.image:hover .textContainer {
+  opacity: 1;
+  left: 20px;
+  bottom: 20px;
+}
+
+.image .textContainer p {
+  display: inline;
+  background-color: white;
+  color: var(--fontPrimary);
+  padding: 3px;
+  font-size: 2rem;
+  font-weight: 700;
+  /* word-wrap: break-word; */
+}

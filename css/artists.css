@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+.artistImageAndInfo {
+    display: flex;
+    gap: 30px;
+}
+
+.artistImage img {
+    max-width: 100%;
+    height: auto;
+}
+
+.artistInfo {
+    padding: 10px;
+}
+
+.artistInfo h1 {
+    font-family: 'Berkshire Swash', cursive, sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.artistInfo p {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.artistInfo p span {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.artistDescription p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+    .artistImageAndInfo {
+      display: block;
+    }
+
+    .artistInfo h1 {
+        font-size: 35px;
+    }
+
+    .artistInfo p {
+        font-size: 20px;
+    }
+
+    .artistInfo p span {
+        font-size: 20px;
+    }
+  }
